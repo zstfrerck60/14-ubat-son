@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Semoş & Serkan - 3. Yıl</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<button id="music-control" onclick="toggleMusic()" style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: rgba(255,255,255,0.2); border: 2px solid #fff; width: 45px; height: 45px; border-radius: 50%; color: #fff; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+    🔊
+</button>
+    <audio id="myAudio" loop>
+        <source src="sarki.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="heart-rain"></div>
+
+    <section id="login-page" class="active">
+        <div class="glass-box pulse">
+            <h1 class="main-title">Hoş Geldin Semoşum ❤️</h1>
+            <button class="fancy-btn" onclick="goTo('main-menu')">Giriş Yap</button>
+        </div>
+    </section>
+
+    <section id="main-menu">
+        <h1 class="section-title">Bizden Parçalar...</h1>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="goTo('vlog-page')">🎬<br>Vlog</div>
+            <div class="menu-card" onclick="goTo('foto-page')">📸 <br>Biz</div>
+            <div class="menu-card" onclick="goTo('hikaye-page')">💌 <br>Anılar</div>
+            <div class="menu-card" onclick="goTo('sarki-page')">🎵 <br>Şarkımız</div>
+            <div class="menu-card" onclick="goTo('mesaj-page')">✍️ <br>Mesajım</div>
+            <div class="menu-card" onclick="goTo('sayac-page')">⏳ <br>Sayaç</div>
+        </div>
+    </section>
+
+    <section id="foto-page">
+        <button class="back-btn" onclick="goTo('main-menu')">⬅</button>
+        <div class="photo-desk" id="desk"></div>
+    </section>
+
+    <section id="hikaye-page">
+    <button class="back-btn" onclick="goTo('main-menu')">❤️</button>
+    
+    <div class="story-container">
+        <div class="story-step active-step" id="step1">
+            <h2 class="title-glow">İlk Mesaj</h2>
+            <div class="wa-container">
+                <div class="bubble received"><span>[Video 🎥]</span><br>Geliyoruuuuz</div>
+            </div>
+            </div>
+            <button class="next-btn" onclick="nextStep(2)">Devam Et ➔</button>
+        </div>
+
+        <div class="story-step" id="step2">
+            <h2 class="title-glow">İlk Göz Göze Gelme</h2>
+            <div class="scroll-text">
+                sınıftan çıktım kalbim yerinden çıkıcak gibi sanki onu ilk kez göreceğim heycandan karnıma ağrılar giriyor tek başıma yapamaaycağım mehmetwte gelsin mehemtide aldım yavaş yavaş onun sınıfına ilerliyorum içimden birsuru düşünce acaba instagramdaki kadar güzelmi yoksa çirkinmi yada onu gördüğümde ne diyeceğim beni beğenicekmi onunla nasıl konuşıucam yaklaştıkça bayılcak gibi oluyorum ve geldim sınıfın onundeyim tek yapmam gereken onun çıkmasını beklemek o da ne bi kız dışarı çıkıp içeri girdi o muydu acaba bembeyaz teni parlıyor gibiydi sonra sınıftan çıktı ananı sikim o sınıftan çıktı bana slow motion efekti girdi etrafına bakıyor beni arıyor teni güneş gibi parlıyor dudakları kıpkırmızı instagramdaki haline benzemiyordu ki ondan çok daha iyidi o.. o cok güzeldi... 
+            </div>
+            <button class="next-btn" onclick="nextStep(3)">Devam Et ➔</button>
+        </div>
+
+        <div class="story-step" id="step3">
+            <h2 class="title-glow">İlk Buluşma</h2>
+            <div class="scroll-text">
+                buluşmaya karar verdiğimiz zaman evde kombin yapmayı denediğimi hatırlıyorum bu işlerden hiç anlamasamda ona özel olarak giyindiğimi bilmesini istiyordum ve ona çıkma teklifi edicektim çok heycanlı ve çok gergindim kafamda bir konuşma hazırlamış ve yolda tekrar tekrar kafamda pratik yapıyordum ama o parka ne kadar yaklaşırsam o kadar karıştırıyordum herşeyi sonunda geldim oturdum onu bekliyordum biraz geç kalmıştı tabi ama onu beklerken kedinin biri kucağıma çıkmıstı elazından gerginliğimi atacağım birşey oldu çokda işe yaramadı ama neyse sonra seni gördüm pititr pitir geliyodun yürüyerek bana gülümsüyordum o an zaten komple bi reset attı beyin geldin yanıma oturudn elini tuttum çıkma teklifini yapıcam aklındaki konuşmayı yapıyorum bi an heycandan duraksadım sen gözlerime bakıyon heycanlı heycanlı ben sana bakıyom heycandan ve gözlerinden aklımdaki konuşmayı unuttum o an sonra konuşmayı siktir ettim o an aklımdan geçenleri soyledim çıkma teklifini ettim e sende dünden razısın tabi kabul ettin hemen bi aşkda böyle başladı işte o parkta ilişkimşzn 2 yılı filan o parkta geçti sonra ama ilk günün heycanı gbi olamdı asla...
+            </div>
+            <button class="next-btn" onclick="nextStep(4)">Devam Et ➔</button>
+        </div>
+
+        <div class="story-step" id="step4">
+            <h2 class="title-glow">İlk Öpücük</h2>
+            <div class="scroll-text">
+                 bir son bahar akşamı semayı arkadaşımla tanıştırdım ve evine bırakıyordum sonra sema köye gdicekti bi süre görüşemiyecekti einin önüne kadar geldim ama onu görmeye doyamamıstım ki bir banka oturduk biribirmizden ayrı kalıcağımızı bilince birlikte geçirdiğimiz zaman daha bir değerliydi sanki hava kararmış loş sokak lambalarının ışığı vardı sıkı sıkı sarılıyor olabildiğince içime çekiyordum kokusunu kokusu üstüme sinsinde istediğim zaman koklayabileyim diye uğraşıyordum sanki sarılırken kafamı kaldırdım yanağını öpmek için hazırlandım bir öpücük kondurdum yanagına sonra dikkatlice baktım yanağı değildi konduuduğum öpücüğün yeri yanlışıkla öpmüştüm belki onu ama gayet romantikti... 
+            </div>
+            <button class="next-btn" onclick="goTo('main-menu')">Hepsini Okudum ❤️</button>
+        </div>
+    </div>
+</section>
+
+   <section id="sarki-page" class="muslum-theme">
+    
+    <button class="back-btn" onclick="goTo('main-menu')">❤️</button>
+    <div class="muslum-box">
+        <h2 style="font-family: 'Pacifico', cursive; color: gold;">Müslüm Baba Köşesi</h2>
+        <div class="muslum-decor" style="font-size: 4rem; margin: 20px 0;">🌹</div>
+        
+        <p style="font-size: 1.2rem; margin-bottom: 20px;">"Bir Ömür Yetmez Ki..."</p>
+        
+        <a href=https://youtu.be/athpovobgRQ?si=XxNKyc3WHH9r_hvk target="_blank" style="text-decoration: none;">
+            <button class="fancy-btn" style="background: #e62117; border-color: #fff;">
+                🎬 ŞARKIMIZI İZLE / DİNLE
+            </button>
+        </a>
+
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            (Butona basınca şarkımız Youtubede açılcak semos)
+        </p>
+    </div>
+</section>
+
+    <section id="mesaj-page">
+        <button class="back-btn" onclick="goTo('main-menu')">⬅</button>
+        <div class="letter-box">
+            <div id="typing-text"></div>
+        </div>
+    </section>
+
+   <section id="sayac-page">
+    <button class="back-btn" onclick="goTo('main-menu')">❤️</button>
+    <div class="premium-counter">
+        <h2 class="neon-text">Beraber Geçen Her An...</h2>
+        <div id="timer-display" class="timer-box"></div>
+        <div style="margin-top: 30px;">
+            <button id="big-love-btn">❤️ SENİ SEVİYORUM ❤️</button>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<button class="back-btn" onclick="goTo('main-menu')">❤️</button>
+<section id="vlog-page">
+    <button class="back-btn" onclick="goTo('main-menu')">❤️</button>
+    <h2 class="section-title" style="font-family: 'Pacifico'; color: white; margin-bottom: 20px;">Yapım Günlüğü 🛠️</h2>
+    
+    <div class="vlog-container">
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 1.1</span>
+            <video controls><source src="gün 1.1.mp4" type="video/mp4"></video>
+            <p>İlk temel atıldı, heyecan dorukta!</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 1.2</span>
+            <video controls><source src="gün 1.2.mp4" type="video/mp4"></video>
+            <p>Sitenin iskeleti yavaş yavaş kuruluyor.</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 2.1</span>
+            <video controls><source src="gün 2.1.mp4" type="video/mp4"></video>
+            <p>İkinci gün: Kayıp parçayı bulduk, yola devam.</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 3.1</span>
+            <video controls><source src="gün 3.1.mp4" type="video/mp4"></video>
+            <p>Tasarım ve renkler oturtuluyor.</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 3.2</span>
+            <video controls><source src="gün 3.2.mp4" type="video/mp4"></video>
+            <p>Detaylar, butonlar ve o meşhur kalpler...</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 3.3</span>
+            <video controls><source src="gün 3.3.mp4" type="video/mp4"></video>
+            <p>Gece mesaisi: Hatalar tek tek çözülüyor.</p>
+        </div>
+
+        <div class="vlog-item">
+            <span class="vlog-date">GÜN 4.1</span>
+            <video controls><source src="gün 4.1.mp4" type="video/mp4"></video>
+            <p>Final: Semoş için her şey hazır! ❤️</p>
+        </div>
+    </div>
+</section>
